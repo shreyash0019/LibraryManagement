@@ -1,0 +1,26 @@
+{% extends 'manager/base.html' %}
+{% block content %}
+    <h2>Books</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{% url 'add-book' %}" class="btn btn-success mb-3">Add Book</a>
+    <ul class="list-group">
+        {% for book in books %}
+            <li class="list-group-item">
+                <strong>{{ book.title }}</strong> ({{ book.genre }}) - {{ book.published_date }}<br>
+                Author: {{ book.author.name }}
+                <div class="mt-2">
+                    <a href="{% url 'edit-book' book.id %}" class="btn btn-sm btn-info">Edit</a>
+                    <a href="{% url 'delete-book' book.id %}" class="btn btn-sm btn-danger">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% include 'manager/pagination.html' with page_obj=page_obj %}
+{% endblock %}

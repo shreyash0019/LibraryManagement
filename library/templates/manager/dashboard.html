@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .quote strong {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'author-list' %}">View Authors</a></li>
+                <li><a href="{% url 'book-list' %}">View Books</a></li>
+                <li><a href="{% url 'borrow-list' %}">View Borrow Records</a></li>
+                <li><a href="{% url 'add-author' %}">Add Author</a></li>
+                <li><a href="{% url 'add-book' %}">Add Book</a></li>
+                <li><a href="{% url 'add-borrow' %}">Add Borrow Record</a></li>
+                <li><a href="{% url 'export-authors' %}" class="btn btn-dark me-2">Export Authors</a></li>
+                <li><a href="{% url 'export-books' %}" class="btn btn-dark me-2">Export Books</a></li>
+                <li><a href="{% url 'export-borrows' %}" class="btn btn-dark">Export Borrows</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Manage Your Library</h2>
+        <p>Use the links above to manage authors, books, and borrow records.</p>
+        <br>
+        <br>
+        <br>
+
+        <!-- Display Random Quote -->
+        <div class="quote">
+            <p><strong>{{ random_quote }}</strong></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Management System</p>
+    </footer>
+</body>
+</html>

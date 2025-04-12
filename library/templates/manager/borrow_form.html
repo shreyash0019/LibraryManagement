@@ -1,0 +1,37 @@
+{% extends 'manager/base.html' %}
+{% load form_filters %}
+
+{% block content %}
+    <h2>Add Borrow Record</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="mb-3">
+            <label for="id_user_name" class="form-label">User Name</label>
+            {{ form.user_name|add_class:"form-control" }}
+            {{ form.user_name.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_book" class="form-label">Book</label>
+            {{ form.book|add_class:"form-select" }}
+            {{ form.book.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_borrow_date" class="form-label">Borrow Date</label>
+            {{ form.borrow_date|add_class:"form-control" }}
+            {{ form.borrow_date.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_return_date" class="form-label">Return Date</label>
+            {{ form.return_date|add_class:"form-control" }}
+            {{ form.return_date.errors }}
+        </div>
+
+        <button type="submit" class="btn btn-warning">Add Borrow Record</button>
+    </form>
+{% endblock %}

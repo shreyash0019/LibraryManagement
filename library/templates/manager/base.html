@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Library Management System</h1>
+
+        <!-- Navigation -->
+        <nav class="mb-4 text-center">
+            <a href="{% url 'library-dashboard' %}" class="btn btn-info me-2">Dashboard</a> <a
+                href="{% url 'author-list' %}" class="btn btn-primary me-2">Authors</a>
+            <a href="{% url 'book-list' %}" class="btn btn-success me-2">Books</a>
+            <a href="{% url 'borrow-list' %}" class="btn btn-warning me-2">Borrows</a>
+            <a href="{% url 'export-authors' %}" class="btn btn-dark me-2">Export Authors</a>
+            <a href="{% url 'export-books' %}" class="btn btn-dark me-2">Export Books</a>
+            <a href="{% url 'export-borrows' %}" class="btn btn-dark">Export Borrows</a>
+        </nav>
+
+        <!-- Flash Messages -->
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Main Content -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JS (for dismissible alerts) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

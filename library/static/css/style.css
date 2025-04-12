@@ -1,0 +1,107 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading Style */
+h2 {
+    color: #5d5d5d;
+    margin-bottom: 20px;
+}
+
+/* Container for Centering the Content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Delete Card Style */
+.delete-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Record Details Section */
+.record-details {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.record-details p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.record-details strong {
+    color: #333;
+}
+
+/* Confirmation Message */
+.delete-card h2 {
+    font-size: 1.5em;
+    color: #ff4d4d;  /* Red color for delete action */
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 45%;
+    text-align: center;
+    border: none;
+}
+
+/* Delete Button */
+.btn-danger {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e60000;
+}
+
+/* Cancel Button */
+.btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-cancel:hover {
+    background-color: #e0e0e0;
+}

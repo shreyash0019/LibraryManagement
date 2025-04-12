@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Borrow Record</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h2>Are you sure you want to delete this borrow record?</h2>
+    <div>
+        <p><strong>User:</strong> {{ object.user_name }}</p>
+        <p><strong>Book:</strong> {{ object.book.title }}</p>
+        <p><strong>Borrowed on:</strong> {{ object.borrow_date }}</p>
+        <p><strong>Return by:</strong> {{ object.return_date }}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+    </form>
+
+    <p><a href="{% url 'borrow-list' %}">Cancel and go back to Borrow Records</a></p>
+</body>
+</html>

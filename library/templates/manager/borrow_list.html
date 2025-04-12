@@ -1,0 +1,26 @@
+{% extends 'manager/base.html' %}
+{% block content %}
+    <h2>Borrow Records</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{% url 'add-borrow' %}" class="btn btn-warning mb-3">Add Borrow</a>
+    <ul class="list-group">
+        {% for borrow in borrow_records %}
+            <li class="list-group-item">
+                <strong>{{ borrow.user_name }}</strong> borrowed <em>{{ borrow.book.title }}</em><br>
+                From {{ borrow.borrow_date }} to {{ borrow.return_date }}
+                <div class="mt-2">
+                    <a href="{% url 'edit-borrow' borrow.id %}" class="btn btn-sm btn-info">Edit</a>
+                    <a href="{% url 'delete-borrow' borrow.id %}" class="btn btn-sm btn-danger">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% include 'manager/pagination.html' with page_obj=page_obj %}
+{% endblock %}

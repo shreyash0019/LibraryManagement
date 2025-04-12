@@ -1,0 +1,37 @@
+{% extends 'manager/base.html' %}
+{% load form_filters %}
+
+{% block content %}
+    <h2>Add Book</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Title</label>
+            {{ form.title|add_class:"form-control" }}
+            {{ form.title.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_genre" class="form-label">Genre</label>
+            {{ form.genre|add_class:"form-control" }}
+            {{ form.genre.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_published_date" class="form-label">Published Date</label>
+            {{ form.published_date|add_class:"form-control" }}
+            {{ form.published_date.errors }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_author" class="form-label">Author</label>
+            {{ form.author|add_class:"form-select" }}
+            {{ form.author.errors }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Book</button>
+    </form>
+{% endblock %}
