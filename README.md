@@ -58,7 +58,7 @@ python manage.py runserver
 
 Visit the app at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-## 📃 Usage
+## 📓 Usage
 
 - Admin panel: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 - Register: `/register/`
@@ -72,16 +72,22 @@ Visit the app at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ```
 library/
 ├── library/
+│   ├── __init__.py
+│   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   └── ...
+│   └── wsgi.py
 ├── manager/
 │   ├── migrations/
 │   ├── templatetags/
+│   │   ├── __init__.py
 │   │   └── form_filters.py
+│   ├── __init__.py
 │   ├── admin.py
-│   ├── models.py
+│   ├── apps.py
 │   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
 │   ├── views.py
 │   └── urls.py
 ├── templates/
@@ -106,10 +112,10 @@ library/
 │       ├── pagination.html
 │       └── register.html
 ├── static/css/style.css
+├── db.sqlite3
 ├── manage.py
-└── db.sqlite3
-└──requirements.txt
-└──README.md
+├── requirements.txt
+└── README.md
 ```
 
 ## 📄 Files of Interest
@@ -135,5 +141,5 @@ This project is licensed under the MIT License.
 ---
 
 ## Author
- [Shreyash Ingle](https://github.com/shreyash0019)
+[Shreyash Ingle](https://github.com/shreyash0019)
 
