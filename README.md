@@ -1,4 +1,4 @@
-# Django Library Management System
+# Library Management System
 
 This is a Django-based web application for managing an online library system. It allows administrators to manage authors, books, and borrow records. Additionally, it includes features like user registration, dashboard, pagination, and exporting data to Excel.
 
