@@ -16,7 +16,7 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)  
 
     def __str__(self):
-        return self.title  # ✅ use 'title', not 'name'
+        return self.title  
 
 
 class BorrowRecord(models.Model):
