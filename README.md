@@ -24,8 +24,8 @@ This is a Django-based web application for managing an online library system. It
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/shreyash0019/LiberaryManagement.git
-cd LiberaryManagement
+git clone https://github.com/shreyash0019/LibraryManagement.git
+cd LibraryManagement
 ```
 
 ### Step 2: Set Up a Virtual Environment (Recommended)
