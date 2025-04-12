@@ -108,6 +108,8 @@ library/
 ├── static/css/style.css
 ├── manage.py
 └── db.sqlite3
+└──requirements.txt
+└──README.md
 ```
 
 ## 📄 Files of Interest
