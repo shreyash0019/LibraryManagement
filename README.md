@@ -115,7 +115,8 @@ library/
 ├── db.sqlite3
 ├── manage.py
 ├── requirements.txt
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
 ## 📄 Files of Interest
@@ -136,7 +137,7 @@ library/
 
 ## ✉️ License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
