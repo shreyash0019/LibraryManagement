@@ -22,7 +22,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('library-dashboard')  # Redirect to the library dashboard after login
+            return redirect('library-dashboard')  
     else:
         form = UserCreationForm()
     
@@ -32,7 +32,7 @@ def register(request):
 
 
 def library_dashboard(request):
-    # List of book-related quotes
+    
     quotes = [
         "A room without books is like a body without a soul. – Marcus Tullius Cicero",
         "The only thing you absolutely have to know is the location of the library. – Albert Einstein",
@@ -44,10 +44,10 @@ def library_dashboard(request):
         "Books are the mirrors of the soul. – Virginia Woolf"
     ]
     
-    # Select a random quote
+    
     random_quote = random.choice(quotes)
 
-    # Pass the quote to the template
+   
     return render(request, 'manager/dashboard.html', {'random_quote': random_quote})
 
 # ---------- LIST VIEWS (with Pagination) ----------
