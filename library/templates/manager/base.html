@@ -11,7 +11,7 @@
     <div class="container mt-4">
         <h1 class="mb-4 text-center">Library Management System</h1>
 
-        <!-- Navigation -->
+        
         <nav class="mb-4 text-center">
             <a href="{% url 'library-dashboard' %}" class="btn btn-info me-2">Dashboard</a> <a
                 href="{% url 'author-list' %}" class="btn btn-primary me-2">Authors</a>
@@ -22,7 +22,7 @@
             <a href="{% url 'export-borrows' %}" class="btn btn-dark">Export Borrows</a>
         </nav>
 
-        <!-- Flash Messages -->
+      
         {% if messages %}
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
@@ -32,7 +32,7 @@
         {% endfor %}
         {% endif %}
 
-        <!-- Main Content -->
+      
         {% block content %}{% endblock %}
     </div>
 
