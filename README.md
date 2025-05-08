@@ -15,7 +15,7 @@ This is a Django-based web application for managing an online library system. It
 
 ## 📊 Requirements
 
-- Python 3.8 or above
+- Python 3.12
 - Django 5.1.4
 - openpyxl
 - xlwt
